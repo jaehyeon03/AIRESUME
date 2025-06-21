@@ -1,0 +1,672 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard", sans-serif;
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 1rem 0;
+    color: black;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+}
+
+/* 내부 container 너비 고정 */
+header .container {
+    width: 1200px;  /* ✅ 헤더 크기 고정 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* 로고 */
+.logo {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 2rem;
+    display: inline-block;
+    color: black;
+    white-space: nowrap;
+    margin-left: 0; /* ✅ 좌측 여백 고정 대신 container 중앙 정렬로 대체 */
+}
+
+/* nav */
+header nav {
+    flex-grow: 1;
+    margin: 0 2rem;
+    overflow-x: auto; /* ✅ 창 줄어들면 스크롤로 대체 */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+    white-space: nowrap;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li button {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+header nav ul li button:hover {
+    color: #007bff;
+    background-color: transparent;
+    transition: color 0.2s ease;
+  }
+
+/* 로그인 버튼 영역 */
+header .download-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.download-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    white-space: nowrap;
+    margin-right: 0; /* ✅ 기존 130px 제거 */
+}
+
+.download-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* 활성화 효과 */
+header.active {
+    background-color: white;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.nav-link.active button {
+    border-bottom: 2px solid #007BFF;
+    font-size: 0.5rem;
+    color: #007BFF;
+  }
+  
+  
+
+/*main*/
+main {
+    width: 100%;
+    height: 70vh;
+    background: radial-gradient(
+      circle at 30% 30%,
+      #a7dcf2 0%,
+      #a1b1f7 50%,
+      #a4cbf0 70%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    position: relative;
+    /*
+    border-radius: 10% 10% 68% 0% / 0% 0% 32% 0%;
+    */
+    }
+
+/* 내부 container 정렬 */
+main .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 3rem;
+    text-align: start;
+    width: 100%;
+    max-width: 1140px;
+    margin-top: 100px;
+    
+}
+
+.text-block {
+    grid-column: 1 / 2; 
+    grid-row:    1 / 2;  
+}
+  
+ 
+.image-block {
+    grid-column: 2 / 3;  
+    grid-row:    1 / 2;  
+    display: flex;       
+    justify-content: center;
+}
+
+.image-block img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+/* 문구 스타일 */
+main p {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: white;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    padding-top: 10px;
+    color: white;
+}
+
+main image{
+    width: 1%;
+}
+.make-resume-btn {
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;  /* 파란 계열 버튼 색 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.make-resume-btn:hover {
+    background-color: black;
+}
+
+.event{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #007BFF; /* 강조 색상 (보라색 계열) */
+  text-align: center;
+}
+
+
+
+.main-sec1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.introduce{
+    display: inline-block;          
+    padding-bottom: 40px;  
+    padding-left: 100px;   
+    padding-right: 100px;        
+    border-bottom: 1px solid #c8c8cb;/* 두께·색 지정 */
+}
+
+.introduce h2{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 500;  
+}
+.introduce h2 span{
+    color:  #007bff;
+}
+
+.introduce p{
+    text-align: center;
+    color: #4b4848;
+    font-size: 18px;
+}
+
+/*introduce2*/
+.main-sec2{
+    height: 50vh;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    margin-bottom:50px;
+}
+.introduce2 {
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background: white;
+    /* 1) 컨테이너 자신의 테두리 */
+    border: 1px solid #007bff;
+    border-radius: 66% 34% 70% 30% / 30% 68% 32% 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    /* 1번 레이어 애니메이션 */
+    animation: morph1 8s infinite ease-in-out alternate;
+  }
+  
+  
+  .introduce2::before,
+  .introduce2::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+  }
+  
+  
+  .introduce2::before {
+    border: 1px solid #007bff;
+    border-radius: 50% 50% 30% 70% / 60% 30% 70% 40%;
+    z-index: -1;
+    animation: morph2 10s infinite ease-in-out alternate-reverse;
+  }
+  
+  
+  .introduce2::after {
+    border: 1px solid #007bff;
+    border-radius: 40% 60% 60% 40% / 50% 70% 30% 50%;
+    z-index: -2;
+    animation: morph3 12s infinite ease-in-out alternate;
+  }
+  
+ 
+  @keyframes morph1 {
+    to {
+      border-radius: 30% 70% 34% 66% / 68% 30% 70% 32%;
+    }
+  }
+  @keyframes morph2 {
+    to {
+      border-radius: 70% 30% 50% 50% / 40% 60% 30% 70%;
+    }
+  }
+  @keyframes morph3 {
+    to {
+      border-radius: 60% 40% 40% 60% / 70% 50% 60% 30%;
+    }
+  }
+
+.introduce2-btn{
+    margin-top: 20px;
+    padding: 1rem;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;  /* 파란 계열 버튼 색 */
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.introduce2 h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.introduce2 p{
+    text-align: center;
+}
+.introduce3{
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background: white;
+    /* 1) 컨테이너 자신의 테두리 */
+    border: 1px solid #007bff;
+    border-radius: 66% 34% 70% 30% / 30% 68% 32% 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    /* 1번 레이어 애니메이션 */
+    animation: morph1 8s infinite ease-in-out alternate;
+    
+}
+
+.introduce3::before,
+.introduce3::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+}
+
+
+.introduce3::before {
+  border: 1px solid #007bff;
+  border-radius: 50% 50% 30% 70% / 60% 30% 70% 40%;
+  z-index: -1;
+  animation: morph2 10s infinite ease-in-out alternate-reverse;
+}
+
+
+.introduce3::after {
+  border: 1px solid #007bff;
+  border-radius: 40% 60% 60% 40% / 50% 70% 30% 50%;
+  z-index: -2;
+  animation: morph3 12s infinite ease-in-out alternate;
+}
+.introduce3-btn{
+    margin-top: 20px;
+    padding: 1rem;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;  /* 파란 계열 버튼 색 */
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.introduce3 h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.introduce3 p{
+    text-align: center;
+}
+
+/*로그인*/
+/* 로그인 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+  .modal-content h2{
+    margin-bottom: 10px;
+  }
+  .close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"],
+  #googleLoginBtn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.8rem;
+    cursor: pointer;
+  }
+  
+  button.btn-2:hover {
+    background-color: #083364;
+  }
+  
+  .divider {
+    margin: 1rem 0;
+    color: #999;
+    font-size: 0.9rem;
+  }
+
+  /*section2*/
+  .ai-question-section{
+    
+    padding: 60px 20px;
+    
+
+  }
+  .ai-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    
+    margin: 0 auto;
+  }
+
+  .ai-text-content {
+    flex: 1;
+    margin-left: 150px;
+
+  }.ai-step-number {
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  .ai-text-content h2 {
+    color: #007bff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .sub-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .feature-list li::before {
+    content: "✔";
+    color: #007bff;
+    margin-right: 8px;
+  }
+  .feature-list li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
+  
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    padding: 10px;
+    }
+  
+  .image-content img {
+    max-width: 80%;
+    border-radius: 20px;
+  }
+
+  /*section3*/
+  .ai-question-section2{
+    padding: 60px 20px;
+  }
+
+  .ai-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    
+    margin: 0 auto;
+  }
+
+  .ai-text-content2 {
+    flex: 1;
+    margin-left: 110px;
+    
+
+  }.ai-step-number2 {
+    
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  .ai-text-content2 h2 {
+    color: #007bff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .sub-text2 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .feature-list2 {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .feature-list2 li::before {
+    content: "✔";
+    color: #007bff;
+    margin-right: 8px;
+  }
+  .feature-list2 li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
+  
+  .image-content2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+    padding: 10px;
+    background-color: #dfe9fc;
+    border-radius: 100px;
+  }
+  
+  .image-content2 img {
+    max-width: 80%;
+    border-radius: 20px;
+  }
+  
+  
+  
+
+
+ 
+
+  /* footer */
+
+  .site-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(97, 91, 91);
+    height: 30vh;
+  }
+
+  .footer-container{
+    font-size: 12px;
+  }
+
+  .footer-p{
+    margin-bottom: 10px;
+  }
+
+
+  

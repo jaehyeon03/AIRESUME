@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re:start</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">이력써</a></h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="resume.html" class="nav-link"><button><span>이력서 만들기</span></button></a>
+                    </li>
+                    <li>
+                        <a href="employee.html" class="nav-link"><button>중장년컨텐츠</button></a>
+                    </li>
+                    <li>
+                        <a href="pricing.html" class ="nav-link"><button>요금제</button></a>
+                    </li>
+                    <li>
+                        <a href="support.html" class ='nav-link'><button>고객지원&생성예시</button></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="download-container">
+                <button class="download-btn">로그인</button>
+            </div>
+        </div>
+    </header>
+
+
+    <main id="main">
+        <div class="container">
+          <div class="text-block">
+            <p><i class="fa-regular fa-pen-to-square"></i> 막막했던 이력서 작성<br> 이력써와 함께 시작하세요 !</p>
+            <h2>마치 10년차 대표같은 이력서 전문 AI</h2>
+            <a href="resumemade.html">
+              <button class="make-resume-btn">이력서 생성</button>
+            </a>
+          </div>
+          <div class="image-block">
+            <img src="./images/gpt2.png" alt="메인이미지">
+          </div>
+        </div>
+      </main>
+
+    <div id ='loginModal' class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>로그인</h2>
+            <form id = "loginForm">
+                <label for="email">아이디</label>
+                <input type="email" id = 'email' name="email" placeholder="아이디 입력" required>
+
+                <label for="password">비밀번호</label>
+                <input type="password" id = 'password' name="password" placeholder="비밀번호 입력" required>
+
+                <button class = 'btn-2' type="submit">로그인</button>
+                <div class="divider">또는</div>
+                <button type="button" id="googleLoginBtn">회원가입</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="main-sec1">
+        <div class="introduce">
+            <h2><span>이력써</span>AI로 이력서⋅자기소개서를 <span>생성</span>해보세요.</h2>
+            <p><span class="border-underline">버튼만 클릭하고 세상에서 가장 쉬운 이력서를 만들어보세요 <br>이력써 AI는 보다 사용자에게 효율적인 질의 생성방법을 제시합니다.</span></p>
+        </div>
+    </section>
+    
+
+      <section class="ai-question-section">
+        <div class="ai-container">
+            <div class="ai-text-content">
+                <h2><span class="step-number1">01</span> 버튼 클릭 유형</h2>
+                <p class="sub-text">
+                    자신에게 맞는 성격을 클릭 후 <br>
+                    <strong>이력써 AI가 추천</strong>하는 이력서 문장을
+                    <strong>자동으로 생성</strong>합니다.
+                </p>
+                <ul class="feature-list">
+                    <li>지원 기업명 입력</li>
+                    <li>지원 직무 선택</li>
+                    <li>성격 및 장점 선택</li>
+                    <li>자소서 생성</li>
+                </ul>
+            </div>
+
+            <div class="image-content">
+                <img src="./images/ai-question.png" alt="01">
+            </div>
+        </div>
+      </section>
+
+      <section class="ai-question-section2">
+        <div class="ai-container2">
+
+            <div class="image-content2">
+                <img src="./images/ai-question.png" alt="01">
+            </div>
+
+            <div class="ai-text-content2">
+                <h2><span class="step-number2">02</span> 간단한 인적사항 기입</h2>
+                <p class="sub-text2">
+                    자신에게 맞는 성격을 클릭  <br>
+                    <strong>이력써 AI가 추천</strong>하는 이력서 문장을
+                    <strong>자동으로 생성</strong>합니다.
+                </p>
+                <ul class="feature-list2">
+                    <li>지원 기업명 입력</li>
+                    <li>지원 직무 선택</li>
+                    <li>성격 및 장점 선택</li>
+                    <li>자소서 생성</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+
+      <div class="event">
+        <p>이력써 AI로 지금 당장 만들어보세요!</p>
+      </div>
+
+      <section class="main-sec2">
+
+        <div class="introduce2">
+          <h2>이력서⋅자기소개서 생성</h2>
+          <p class="justified">
+            단 몇 번의 클릭과 간단한 질의로<br>
+            AI가 자동으로 문장을 추천해 주는 <br>
+            맞춤형 이력서 작성 도구입니다.
+          </p>
+
+          <button class="introduce2-btn">이력서⋅자기소개서 생성</button>
+        </div>
+
+        <div class="introduce3">
+            <h2>이력서 진단</h2>
+            <p class="justified">
+              AI가 작성된 이력서를 심층 분석하여<br>
+              어휘 사용, 구성, 키워드 적합성 등을 평가하고<br>
+              맞춤형 피드백과 개선 포인트를 제안합니다.
+            </p>
+
+            <button class="introduce3-btn">이력서 진단</button>
+          </div>
+      </section>
+
+    
+
+      
+      
+
+
+
+<!--
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>주식회사 플로팅 | 대표: 정도영</p>
+            <p>고객센터: 010-0000-0000 | 이메일: floating@naver.com</p>
+            <p>주소: 서울특별시 강남구 테헤란로 ~ 도영스테이션 201호</p>
+            <p class='footer-p'>통신판매업신고번호 : 제 XXXX-서울강남-XXXX호</p>
+            
+            <p>개인정보 처리방침|이용약관|사업자 정보 확인</p>
+
+            <p>© 2025 Floating Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    -->
+    <script src="script.js"></script>
+</body>  
+
+</html>
