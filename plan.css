@@ -1,0 +1,238 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard", sans-serif;
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 1rem 0;
+    color: black;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+}
+
+/* 내부 container 너비 고정 */
+header .container {
+    width: 1200px;  /* ✅ 헤더 크기 고정 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* 로고 */
+.logo {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 2rem;
+    display: inline-block;
+    color: black;
+    white-space: nowrap;
+    margin-left: 0; /* ✅ 좌측 여백 고정 대신 container 중앙 정렬로 대체 */
+}
+
+/* nav */
+header nav {
+    flex-grow: 1;
+    margin: 0 2rem;
+    overflow-x: auto; /* ✅ 창 줄어들면 스크롤로 대체 */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+    white-space: nowrap;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li button {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+header nav ul li button:hover {
+    color: #007bff;
+    background-color: transparent;
+    transition: color 0.2s ease;
+}
+
+/* 로그인 버튼 영역 */
+header .download-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.download-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    white-space: nowrap;
+    margin-right: 0; /* ✅ 기존 130px 제거 */
+}
+
+.download-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* 활성화 효과 */
+header.active {
+    background-color: white;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.nav-link.active button {
+    border-bottom: 2px solid #007BFF;
+    font-size: 0.5rem;
+    color: #007BFF;
+}
+  
+  
+
+.plan-container {
+    width: 1280px;
+    margin: 120px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.plan-sentence{
+    text-align: center;
+}
+
+.plan-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.plan-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    height: 50vh;
+}
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    flex-direction: space-between;
+    background: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+.plan-card h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.plan-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    flex-grow : 1;
+}
+
+.plan-card ul li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.plan-card ul li::before {
+    content: "✔";
+    color: #28a745; /* 초록색 체크 */
+    font-weight: bold;
+    margin-right: 8px;
+
+}
+
+.plan-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plan-btn:hover {
+    background-color: #0056b3;
+}
+  

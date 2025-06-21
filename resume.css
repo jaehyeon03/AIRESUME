@@ -1,0 +1,964 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard", sans-serif;
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 1rem 0;
+    color: black;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+}
+
+/* 내부 container 너비 고정 */
+header .container {
+    margin: 0 auto;  /* ✅ 헤더 크기 고정 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* 로고 */
+.logo {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 2rem;
+    display: inline-block;
+    color: black;
+    white-space: nowrap;
+    margin-left: 0; /* ✅ 좌측 여백 고정 대신 container 중앙 정렬로 대체 */
+}
+
+/* nav */
+header nav {
+    flex-grow: 1;
+    margin: 0 2rem;
+    overflow-x: auto; /* ✅ 창 줄어들면 스크롤로 대체 */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+    white-space: nowrap;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li button {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+header nav ul li button:hover {
+    color: #007bff;
+    background-color: transparent;
+    transition: color 0.2s ease;
+  }
+
+/* 로그인 버튼 영역 */
+header .download-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.download-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    white-space: nowrap;
+    margin-right: 0; /* ✅ 기존 130px 제거 */
+}
+
+.download-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* 활성화 효과 */
+header.active {
+    background-color: white;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.nav-link.active button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-link.active button span {
+  display: inline-block;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 4px;
+  color: #007BFF;
+  
+}
+
+  
+/* resume - main */
+
+/* resume 전용 스타일 */
+
+#main-resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    
+    
+  }
+  
+  #main-resume .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* 수직 가운데 정렬 */
+    align-items: center;       /* 수평 가운데 정렬 */
+    min-height: 260px;         /* 카드 높이 조절 */
+    text-align: center; 
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);       /* 텍스트 가운데 정렬 */
+  }
+  
+  .tags {
+    margin-bottom: 10px;
+  }
+  
+  .tag-start, .tag-pro {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-right: 4px;
+  }
+  
+  .tag-start {
+    font-size: 15px;
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  .tag-pro {
+    font-size: 15px;
+    background-color: #dcd7ff;
+    color: #4b3aff;
+  }
+  
+  #main-resume h2 {
+    margin: 10px 0;
+    font-size: 40px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    white-space : nowrap;
+  }
+  button {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 1rem;         /* 기본 크기 */
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  /* 호버 효과 */
+  button:hover {
+    background-color: #333;
+    transform: scale(1.02);  /* 살짝 확대 */
+  }
+  
+  /* 📱 모바일 화면: 너비가 768px 이하일 때 */
+@media (max-width: 768px) {
+  #main-resume {
+    padding: 20px 10px;
+  }
+
+  .card {
+    min-height: 200px;
+    padding: 16px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* 📱 아주 작은 화면: 너비가 480px 이하일 때 */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .card {
+    min-height: 180px;
+  }
+
+  button {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+
+  /* resumemade */
+  
+  .resume-made{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container-resumemade {
+    max-width: 700px;
+    padding: 40px;
+    text-align: left;
+  }
+
+  .container-resumemade h2{
+    font-size: 40px;
+    margin-bottom: 45px;
+  }
+  .container-resumemade h3{
+    margin-bottom: 18px;
+    font-size: 20px;
+  }
+
+  .container-resumemade p{
+    font-size: 16px;
+  }
+
+  .resume-made-start-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .resume-made-start-btn:hover {
+    background-color: #333;
+  }
+
+  
+  /*footer*/
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(97, 91, 91);
+    height: 30vh;
+  }
+
+  .footer-container{
+    font-size: 12px;
+  }
+
+  .footer-p{
+    margin-bottom: 10px;
+  }
+
+  /*resume-made2*/
+
+  .consent-container {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 2rem;
+  }
+  
+
+  .consent-container h2 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    color: black;
+  }
+  
+  .consent-container ul {
+    
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+  
+  .notice {
+    color: #d9534f;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  label {
+    display: block;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .consent-container button {
+    display: block;
+    width: 20%;
+    padding: 0.8rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .consent-container button:hover {
+    background-color: black;
+  }
+  
+  /** resume-form **/
+  .resume-form{
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    
+
+  }
+  .step-indicator{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .step-indicator .step {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+    color: #999;
+    position: relative;
+  }
+  .step-indicator .step.active {
+    color: #007bff;
+    font-weight: 600;
+  }
+
+  .step-indicator .divider {
+    width: 2px;
+    height: 2px;
+    background: #e0e0e0;
+    border-radius: 1px;
+    margin: 0 10px;
+  }
+
+  .form-content {
+    display: none; /* 기본 숨김 */
+  }
+  
+  .form-content.active[data-step-content="1"] {
+    display: grid; /* active가 붙으면 그리드로 보여주기 */
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+  }
+
+  .photo-section {
+    grid-column: 1;
+    grid-row: 1;
+    margin: auto;
+  }
+  .photo-preview {
+    width: 200px;
+    height: 250px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .photo-preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .photo-preview .icon {
+    font-size: 2rem;
+    color: #bbb;
+  }
+  .btn-upload{
+    margin: auto;
+    padding: 8px 16px;
+    background: #007bff;
+    font-weight: 500;
+    font-size: 12px;
+    width: 50%;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .info-section{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .self-intro-container {
+    grid-column: 1 / -1; /* 1열부터 마지막 열까지 */
+    grid-row: 2;
+  }
+
+  
+  .info-section .form-group{
+    margin-bottom: 10px;
+  }
+  .info-section label {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    margin-top: 0px;
+    color: black
+  }
+  .info-section label span {
+    font-size: 0.8rem;
+    color: #999;
+    margin-left: 4px;
+  }
+  .info-section input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f5f6f8;
+    box-sizing: border-box;
+  }
+
+
+ /* STEP 2: 이력 사항을 1열로 배치 */
+.form-content.active[data-step-content="2"] {
+  display: block;
+  
+  row-gap: 20px;  /* 섹션 간 세로 간격 */
+  padding: 0;
+}
+
+.info-section.full-width {
+  width: 100%;
+}
+.icon-circle{
+  display: inline-flex;
+  justify-content: center;          
+  align-items: center;
+  text-align: center;              
+  width: 15px;                      
+  height: 15px;
+  margin-left: 5px;                  
+  border: 1px dashed #aaa;          
+  border-radius: 50%;                
+  font-size: 0.75rem;                 
+  color: #555;                       
+  background-color: transparent;  
+  cursor: help;                      
+}
+.icon-circle:hover{
+  background-color: #479af3;
+  
+}
+
+/* 각 섹션 그룹 (label + textarea + 글자수 표시) */
+.section-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.section-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.section-group .optional {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.section-group textarea {
+  width: 100%;
+  min-height: 120px;
+  max-height: 300px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  line-height: 1.4;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  resize: vertical;
+  color: #333;
+}
+
+.section-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+}
+
+.section-group .char-count {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  margin-top: 4px;
+}
+
+
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+  
+.btn-prev,
+.btn-next,
+.btn-submit {
+  width: 15%;
+  padding: 14px 0;
+  background: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s;
+}
+  
+.btn-prev {
+  background: #6c757d;
+}
+  
+.btn-prev:hover {
+  background: #5a6268;
+}
+  
+.btn-next:hover,
+.btn-submit:hover {
+  background: #0056b3;
+}
+
+
+  /** resumemade4 **/
+
+.resume-4{
+  height: 120vh;
+}
+
+.resume-4 h2 span{
+  color: #007BFF;
+}
+
+.question-container4 {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+  
+.options-container4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 40px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c8c8cb;
+}
+  
+  /* 입력 필드 전체 박스 */
+.floating-group {
+  position: relative;
+  width: 100%;
+}
+  
+  /* 인풋 스타일 */
+.floating-group input {
+  width: 100%;
+  padding: 16px 44px 16px 12px;  /* 우측에 체크 아이콘 공간 확보 */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  box-sizing: border-box;
+}
+  
+  /* 라벨 */
+.floating-group label {
+  position: absolute;
+  left: 12px;
+  top: 18px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #666;
+  background: white;
+  padding: 0 4px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+  
+  /* 포커스 또는 입력 시 라벨이 위로 이동 */
+.floating-group input:focus + label,
+.floating-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.question-container5 {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.option-container5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto 1px auto;
+  padding-bottom: 20px;
+}
+
+.section-resume4 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section-resume4 label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.section-resume4 textarea {
+  width: 100%;
+  min-height: 140px;
+  max-height: 300px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  resize: vertical;
+  box-sizing: border-box;
+  color: #333;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.section-resume4 textarea:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+}
+
+.section-resume4 .char-count {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+  margin-top: 6px;
+}
+
+
+.section-resume4{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+}
+
+.question-container3{
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.options-container3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  margin: 0 auto 30px auto;
+  border-bottom: 1px solid #c8c8cb;
+  padding-bottom: 20px;
+}
+
+.question-container2{
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-container2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.options-container2 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  border-bottom: 1px solid #c8c8cb;
+  padding-bottom: 20px;
+}
+
+.question-container{
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+  
+.hint-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  border-bottom: 1px solid #c8c8cb;
+  padding-bottom: 20px;
+}
+  
+  
+.option-btn {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  outline: none;
+}
+
+.option-btn:hover {
+  background-color: #f0f0f0;
+}
+  
+  
+.option-btn.selected {
+  box-shadow: 1px 1px 1px 1px #007bff;  
+}
+
+.submit-container {
+  text-align: center;
+  margin-bottom: 30px;
+  align-items: flex-end;
+}
+  
+#submitBtn {
+  padding: 10px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+  
+  
+#submitBtn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+  
+.option-btn.pop {
+    animation: pop 0.3s ease;
+}
+  
+  /* --------------------------
+     2) shaking 효과 (좌우 흔들림)
+     -------------------------- */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .option-btn.shake {
+    animation: shake 0.4s ease;
+  }
+
+
+
+
+  /**resumemade5**/
+  .resume-5 {
+    padding: 40px;
+    background: #fff;
+    width: 700px;
+    height: 1000px;
+    margin: 100px auto 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 250px;
+
+
+  }
+  .profile h1 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile p {
+    margin: 4px 0;
+    font-size: 1rem;
+  }
+
+  .profile-ficture{
+    width: 150px;
+    height: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .upload-label{
+    color: #007BFF;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .profile-ficture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

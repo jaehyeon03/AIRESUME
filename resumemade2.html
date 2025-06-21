@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resumemade2</title>
+    <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+        <h1 class="logo">
+            <a href="index.html">이력써</a></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="resume.html" class="nav-link"><button><span>이력서 만들기</span></button></a>
+                </li>
+                <li>
+                    <a href="employee.html" class="nav-link"><button>중장년컨텐츠</button></a>
+                </li>
+                <li>
+                    <a href="pricing.html" class ="nav-link"><button>요금제</button></a>
+                </li>
+                <li>
+                    <a href="support.html" class ='nav-link'><button>고객지원&생성예시</button></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="download-container">
+            <button class="download-btn">로그인</button>
+        </div>
+    </div>
+</header>
+
+    <div class="consent-container">
+        
+        <form id="consentForm">
+          <!-- 개인정보 수집 동의 -->
+          <section>
+            <h2>1. 개인정보 수집 및 이용 동의 (필수)</h2>
+            <p>Re:Start 이력서 서비스를 이용하는 고객을 대상으로 <br>아래와 같은 개인정보를 수집 및 이용합니다.</p>
+            <ul>
+              <li><strong>1. 목적:</strong> AI 기반 이력서 생성, 고객 문의 응대</li>
+              <li><strong>2. 항목:</strong> 이름, 연락처, 이메일 주소, 간단한 질문</li>
+              <li><strong>3. 보유 기간:</strong> 이력서 제공 후 3년</li>
+            </ul>
+            <p class="notice">※ 동의하지 않으면 서비스 이용이 제한됩니다.</p>
+            <label><input type="checkbox" name="personalInfoAgree" required /> 네, 동의합니다.</label>
+          </section>
+    
+          <!-- 기타 정보 동의 -->
+          <section>
+            <h2>2. 기타 정보 수집 및 이용 동의 (필수)</h2>
+            <p>입력하신 모든 내용은 AI 이력서 작성과 고객 응대 외에는 사용되지 않으며,<br> AI 학습이나 제3자 제공은 일절 없습니다.</p>
+            <ul>
+              <li><strong>1. 목적:</strong> 이력서 자동 생성, 고객 응대</li>
+              <li><strong>2. 보유 기간:</strong> 이력서 제공 후 1년</li>
+            </ul>
+            <p class="notice">※ 동의하지 않으면 서비스 이용이 제한됩니다.</p>
+            <label><input type="checkbox" name="etcInfoAgree" required /> 네, 동의합니다.</label>
+          </section>
+    
+          <!-- 마케팅 수신 동의 -->
+          <section>
+            <h2>3. 마케팅 정보 수신 동의 (선택)</h2>
+            <p>이력서 작성 팁, 채용 정보, 할인 혜택 등을 받아보시겠습니까?</p>
+            <label><input type="checkbox" name="marketingAgree" /> 네, 동의합니다.</label>
+          </section>
+    
+          <button type="submit">다음 단계로</button>
+        </form>
+      </div>
+    <script src="script.js"></script>
+</body>  
+
+</html>
