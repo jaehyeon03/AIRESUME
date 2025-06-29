@@ -5,24 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Re:start</title>
+    <title>이력써</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    
 </head>
 
 <body>
     <header>
         <div class="container">
             <h1 class="logo">
-                <a href="index.html">이력써</a></h1>
+                <a href="index.html">
+                  <img src="images/logo.png" alt="아이템로고" class="logo-img">
+                  <span class="logo-text">이력써 Ai</span>
+                </a>
+              </h1>
             <nav>
                 <ul>
                     <li>
                         <a href="resume.html" class="nav-link"><button><span>이력서 만들기</span></button></a>
                     </li>
                     <li>
-                        <a href="employee.html" class="nav-link"><button>중장년컨텐츠</button></a>
+                        <a href="employee.html" class="nav-link"><button>중장년모아</button></a>
                     </li>
                     <li>
                         <a href="pricing.html" class ="nav-link"><button>요금제</button></a>
@@ -42,14 +46,14 @@
     <main id="main">
         <div class="container">
           <div class="text-block">
-            <p><i class="fa-regular fa-pen-to-square"></i> 막막했던 이력서 작성<br> 이력써와 함께 시작하세요 !</p>
-            <h2>마치 10년차 대표같은 이력서 전문 AI</h2>
+            <p><span>막막했던 이력서 작성,</span><br> 이력써와 함께 시작하세요!</p>
+            <h2>마치 10년차 대표같은&nbsp;&nbsp;<span>이력서 전문 AI</span></h2>
             <a href="resumemade.html">
               <button class="make-resume-btn">이력서 생성</button>
             </a>
           </div>
           <div class="image-block">
-            <img src="images/gpt2.png" alt="메인이미지">
+            <img src="images/main3.png" alt="메인이미지">
           </div>
         </div>
       </main>
@@ -72,14 +76,61 @@
         </div>
     </div>
 
-    <section class="main-sec1">
-        <div class="introduce">
-            <h2><span>이력써</span>AI로 이력서⋅자기소개서를 <span>생성</span>해보세요.</h2>
-            <p><span class="border-underline">버튼만 클릭하고 세상에서 가장 쉬운 이력서를 만들어보세요 <br>이력써 AI는 보다 사용자에게 효율적인 질의 생성방법을 제시합니다.</span></p>
+    <section class="introduce-main">
+        <div class="introduce-container-main">
+          <h2><span>이력써 Ai</span>는 이런 분들에게 필요합니다!</h2>
+      
+          <div class="tab-menu">
+            <button class="tab active">중장년</button>
+            <button class="tab">사회초년생</button>
+            <button class="tab">기업</button>
+            <button class="tab">공공기관</button>
+          </div>
+      
+          <div class="content">
+            <div class="image">
+              <img src="images/logo.png" alt="AI illustration">
+            </div>
+            <ul class="features">
+                <li>이력서와 자기소개서를 온라인으로 쉽고 빠르게  <br>생성할 수 있어 작성 부담을 줄일 수 있습니다.</li>
+                <li>지원자의 직무·성격 정보 기반으로 맞춤형 문서를 제공해 <br> 채용 담당자의 검토 시간을 단축시킵니다.</li>
+                <li>AI가 자동으로 이력 데이터를 분석하여 신뢰도 높은 <br> 결과물을 제공하고, 수정 없이 바로 제출 가능합니다.</li>                
+              <a href="#" class="more-link">사례 더보기 &gt;</a>
+            </ul>
+          </div>
         </div>
-    </section>
-    
+      </section>
 
+      <section class="introduce-main2">
+        <div class="introduce-container-main2">
+          <h2><span>이력써 Ai</span>는 쉽게 해결해드립니다.</h2>
+
+          <div class="content-wrapper">
+            <div class="timeline">
+              <ul>
+                <li class="active">이력서 작성 시간 절감</li>
+                <li>직관적인 사용 방식</li>
+                <li>누구나 쉽게 시작</li>
+                <li>합리적인 비용</li>
+              </ul>
+            </div>
+
+            <div class="description-box">
+              <h3>이력서 작성에 드는 시간을 대폭 줄여드립니다.</h3>
+              <p>
+                ✔ 간단한 질문에 답하면 자동으로 이력서를 생성해주는 <strong>AI 기반 문서 작성 서비스
+              </p>
+
+              <img src="./images/phone-checklist.png" alt="모바일 체크리스트 일러스트" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    
+    <!--
       <section class="ai-question-section">
         <div class="ai-container">
             <div class="ai-text-content">
@@ -98,7 +149,7 @@
             </div>
 
             <div class="image-content">
-                <img src="images/ai-question.png" alt="01">
+                <img src="./images/ai-question.png" alt="01">
             </div>
         </div>
       </section>
@@ -107,7 +158,7 @@
         <div class="ai-container2">
 
             <div class="image-content2">
-                <img src="images/ai-question.png" alt="01">
+                <img src="./images/ai-question2.png" alt="01">
             </div>
 
             <div class="ai-text-content2">
@@ -127,9 +178,13 @@
         </div>
       </section>
 
-      <div class="event">
-        <p>이력써 AI로 지금 당장 만들어보세요!</p>
-      </div>
+    -->
+      <section class="main-sec1">
+        <div class="introduce">
+            <h2><span>이력써 </span>Ai로 이력서⋅자기소개서를 <span>생성</span>해보세요.</h2>
+            <p><span class="border-underline">버튼만 클릭하고 세상에서 가장 쉬운 이력서를 만들어보세요 <br>이력써 AI는 보다 사용자에게 효율적인 질의 생성방법을 제시합니다.</span></p>
+        </div>
+      </section>
 
       <section class="main-sec2">
 
@@ -176,6 +231,10 @@
             <p>© 2025 Floating Inc. All rights reserved.</p>
         </div>
     </footer>
+-->
+    <!--
+<script type="module" src="./main.js"></script>
+
     -->
     <script src="script.js"></script>
 </body>  
