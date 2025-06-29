@@ -38,9 +38,9 @@ header {
     justify-content: center;
 }
 
-/* 내부 container 너비 고정 */
+
 header .container {
-    margin: 0 auto;  /* ✅ 헤더 크기 고정 */
+    width: 1200px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,19 +50,44 @@ header .container {
 
 /* 로고 */
 .logo {
-    font-family: 'Pretendard', sans-serif;
-    font-size: 2rem;
-    display: inline-block;
-    color: black;
-    white-space: nowrap;
-    margin-left: 0; /* ✅ 좌측 여백 고정 대신 container 중앙 정렬로 대체 */
+  display: flex;
+  align-items: center;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  color: black;
 }
 
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.logo-text {
+  font-family: 'Paperlogy-8ExtraBold', sans-serif;
+  font-weight: 600;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-img {
+  height: 3rem; 
+}
+
+.logo-text {
+  font-size: 2rem;
+}
 /* nav */
 header nav {
     flex-grow: 1;
     margin: 0 2rem;
-    overflow-x: auto; /* ✅ 창 줄어들면 스크롤로 대체 */
+    overflow-x: auto; 
 }
 
 header nav ul {
@@ -85,8 +110,9 @@ header nav ul li button {
     color: black;
     background-color: transparent;
     border: none;
+    border-radius: 0; /* ✅ 둥근 모서리 제거 */
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     white-space: nowrap;
 }
 
@@ -133,18 +159,8 @@ header.active {
 }
 
 .nav-link.active button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.nav-link.active button span {
-  display: inline-block;
   border-bottom: 2px solid #007BFF;
-  padding-bottom: 4px;
   color: #007BFF;
-  
 }
 
   
@@ -865,6 +881,7 @@ header.active {
 #submitBtn {
   padding: 10px 30px;
   font-size: 1rem;
+  margin-bottom: 30px;
   border: none;
   border-radius: 6px;
   background-color: #007bff;
